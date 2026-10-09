@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f7fb;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 8%;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+}
+
+nav::before {
+    content: "SwiftPOS";
+    margin-right: auto;
+    color: #2563eb;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav a {
+    padding: 10px 16px;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+/* Page content */
+
+body > h1,
+body > p,
+body > table {
+    width: min(1100px, 86%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > h1 {
+    margin-top: 70px;
+    color: #0f172a;
+    font-size: 38px;
+}
+
+body > p {
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Tables */
+
+table {
+    margin-top: 35px;
+    overflow: hidden;
+    background: #ffffff;
+    border: none;
+    border-collapse: collapse;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+thead {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+th,
+td {
+    padding: 17px 20px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+td {
+    color: #475569;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #eff6ff;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 16px 5%;
+    }
+
+    nav::before {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    body > h1,
+    body > p,
+    body > table {
+        width: 90%;
+    }
+
+    body > h1 {
+        margin-top: 45px;
+        font-size: 30px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Forms */
+
+.form-container {
+    width: min(620px, 90%);
+    margin: 55px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.form-container h1 {
+    margin-bottom: 8px;
+    color: #0f172a;
+    font-size: 32px;
+}
+
+.form-container > p {
+    margin-bottom: 28px;
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    color: #1e293b;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.error,
+.error p {
+    margin-top: 6px;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.form-actions button,
+.form-actions a {
+    padding: 12px 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-actions button {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+.form-actions button:hover {
+    background: #1d4ed8;
+}
+
+.form-actions a {
+    color: #475569;
+    background: #e2e8f0;
+}
+
+.page-actions,
+.success-message {
+    width: min(1100px, 86%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-actions {
+    margin-top: 24px;
+}
+
+.primary-button,
+.edit-button {
+    display: inline-block;
+    color: #ffffff;
+    background: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.primary-button {
+    padding: 12px 18px;
+}
+
+.edit-button {
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+.primary-button:hover,
+.edit-button:hover {
+    background: #1d4ed8;
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 14px 18px; 
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+}
+
+.avatar-image {
+    display: block;
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    background: #dbeafe;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+}
