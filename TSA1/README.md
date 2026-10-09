@@ -43,3 +43,7 @@ database.default.username = root
 database.default.password =
 database.default.DBDriver = MySQLi
 database.default.port = 3306
+
+## Hosted Link
+
+https://it0049-bolor-tasks.gt.tc/
