@@ -113,4 +113,4 @@ The `users` table includes an `avatar` column for storing the generated avatar f
 
 ## Hosted Application
 
-The hosted link will be added after deployment.
+https://it0049-bolor-tfa3.gt.tc/
