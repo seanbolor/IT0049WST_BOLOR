@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2026 at 09:12 PM
+-- Generation Time: Oct 09, 2026 at 09:24 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.5.10
 
@@ -20,6 +20,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `it0049_tfa3`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `id` int(11) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`id`, `full_name`, `email`, `phone`, `created_at`) VALUES
+(1, 'Jeon Jungkook', 'jungkook@yahoo.com', '09171234567', '2026-10-10 01:26:59'),
+(2, 'Kim Taehyung', 'taehyung@yahoo.com', '09181234567', '2026-10-10 01:26:59'),
+(3, 'Park Jimin', 'jimin@yahoo.com', '09191234567', '2026-10-10 01:26:59'),
+(4, 'Kim Seokjin', 'seokjin@yahoo.com', '09201234567', '2026-10-10 01:26:59'),
+(5, 'Kim Namjoon', 'namjoon@yahoo.com', '09211234567', '2026-10-10 01:26:59'),
+(6, 'Min Yoongi', 'yoongi@yahoo.com', '09127482374', '2026-10-09 20:45:48');
 
 -- --------------------------------------------------------
 
@@ -52,6 +78,12 @@ INSERT INTO `users` (`id`, `username`, `full_name`, `avatar`, `created_at`) VALU
 --
 
 --
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -61,6 +93,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
